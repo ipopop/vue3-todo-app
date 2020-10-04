@@ -2,9 +2,7 @@
 <template>
     <form @submit.prevent="addTechno">
         <label for="techno">Techno a ajouter</label>
-        <br />
         <input type="text" name="techno" v-model="techToLearn" />
-        <br />
         <button type="submit">ajouter</button>
     </form>
 </template>
@@ -30,10 +28,20 @@ export default {
 </script>
 
 <style>
-    input {
-        border-radius: 3px;
-        border: none;
-        height: 20px;
-        margin: 10px;
+    form {
+        width: fit-content;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin-bottom: 20px;
+    }
+
+    button {
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 16px;
     }
 </style>
