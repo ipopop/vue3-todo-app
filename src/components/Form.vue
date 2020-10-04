@@ -30,5 +30,10 @@ export default {
 </script>
 
 <style>
-
+    input {
+        border-radius: 3px;
+        border: none;
+        height: 20px;
+        margin: 10px;
+    }
 </style>

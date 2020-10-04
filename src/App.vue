@@ -3,6 +3,8 @@
   <Form @add="saveTechno" />
   <br />
   <TechnoList :technos="technos" @delete-techno="deleteTechno" />
+  <br />
+  <footer><p>Todolist with Vue.js 3</p></footer>
 </template>
 
 <script>
@@ -26,6 +28,7 @@ export default {
 
     const deleteTechno = function(tech) {
       console.log("App | deleteTechno() | tech", tech);
+      technos.value = technos.value.filter(t => t.id !== tech.id)
     }
     
     return {
@@ -44,10 +47,14 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  width: 90%;
+  max-width: 333px;
+  margin: 0 auto;
   margin-top: 60px;
 }
-
-ul {
-  list-style: none;
+footer p {
+  margin-top: 50px;
+  font-size: 0.75rem;
+  color: dimgrey;
 }
 </style>
