@@ -1,6 +1,6 @@
 # vue3-todo-app
 
-![vue3-todo-app](src/assets/vue3-todo-app.jpg)
+![vue3-todo-app](https://raw.githubusercontent.com/ipopop/vue3-todo-app/main/src/assets/vue3-todo-app.jpg)
 
 ## Project setup
 ```
