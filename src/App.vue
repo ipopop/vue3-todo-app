@@ -1,15 +1,39 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>Veille techno</h1>
+  <Form @add="saveTechno" />
+  <br />
+  <TechnoList :technos="technos" @delete-techno="deleteTechno" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Form from "@/components/Form"
+import TechnoList from "@/components/TechnoList"
+import { ref } from 'vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Form,
+    TechnoList
+  },
+  setup() {
+    let technos = ref([])
+
+    const saveTechno = function (data) {
+      console.log("App | saveTechno | data : ", data)
+      technos.value = [...technos.value, { techno: data, id: Date.now() }]
+      console.log("App | saveTechno | technos.value : ", technos.value)
+    }
+
+    const deleteTechno = function(tech) {
+      console.log("App | deleteTechno() | tech", tech);
+    }
+    
+    return {
+      saveTechno,
+      deleteTechno,
+      technos
+    }
+
   }
 }
 </script>
@@ -20,7 +44,10 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
+}
+
+ul {
+  list-style: none;
 }
 </style>

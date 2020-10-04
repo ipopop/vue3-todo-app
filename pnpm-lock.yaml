@@ -9,6 +9,7 @@ devDependencies:
   babel-eslint: 10.1.0_eslint@6.8.0
   eslint: 6.8.0
   eslint-plugin-vue: 7.0.0_eslint@6.8.0
+  vue-cli-plugin-vuetify: 2.0.7
 lockfileVersion: 5.1
 packages:
   /@babel/code-frame/7.10.4:
@@ -4925,6 +4926,12 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-S1zBo1D6zcsyuC6PMmY5+55YMILQ9av8lotMx447Bq6SAgo/sDK6y6uUKmuYhW7eacnIhFfsPmCNYdDzsnnDCg==
+  /interpret/1.4.0:
+    dev: true
+    engines:
+      node: '>= 0.10'
+    resolution:
+      integrity: sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==
   /invariant/2.2.4:
     dependencies:
       loose-envify: 1.4.0
@@ -6100,6 +6107,17 @@ packages:
     dev: true
     resolution:
       integrity: sha512-WeBOdju8SnzPN5vTUJYxYUxLeXpCaVP5i5e0LF8fg7WORF2Wd7wFX/pk0tYZk7s8T+J7VLy0Da6J1+wCT0AtHg==
+  /null-loader/3.0.0:
+    dependencies:
+      loader-utils: 1.4.0
+      schema-utils: 1.0.0
+    dev: true
+    engines:
+      node: '>= 8.9.0'
+    peerDependencies:
+      webpack: ^4.3.0
+    resolution:
+      integrity: sha512-hf5sNLl8xdRho4UPBOOeoIwT3WhjYcMUQm0zj44EhD6UscMAz72o2udpoDFBgykucdEDGIcd6SXbc/G6zssbzw==
   /num2fraction/1.2.2:
     dev: true
     resolution:
@@ -7231,6 +7249,14 @@ packages:
     optional: true
     resolution:
       integrity: sha512-0xe001vZBnJEK+uKcj8qOhyAKPzIT+gStxWr3LCB0DwcXR5NZJ3IaC+yGnHCYzB/S7ov3m3EEbZI2zeNvX+hGQ==
+  /rechoir/0.6.2:
+    dependencies:
+      resolve: 1.17.0
+    dev: true
+    engines:
+      node: '>= 0.10'
+    resolution:
+      integrity: sha1-hSBLVNuoLVdC4oyWdW70OvUOM4Q=
   /regenerate-unicode-properties/8.2.0:
     dependencies:
       regenerate: 1.4.1
@@ -7677,6 +7703,17 @@ packages:
     dev: true
     resolution:
       integrity: sha512-mRz/m/JVscCrkMyPqHc/bczi3OQHkLTqXHEFu0zDhK/qfv3UcOA4SVmRCLmos4bhjr9ekVQubj/R7waKapmiQg==
+  /shelljs/0.8.4:
+    dependencies:
+      glob: 7.1.6
+      interpret: 1.4.0
+      rechoir: 0.6.2
+    dev: true
+    engines:
+      node: '>=4'
+    hasBin: true
+    resolution:
+      integrity: sha512-7gk3UZ9kOfPLIAbslLzyWeGiEqx9e3rxwZM0KE6EL8GlGwjym9Mrlx5/p33bWTu9YG6vcS4MBxYZDHYr5lr8BQ==
   /signal-exit/3.0.3:
     dev: true
     resolution:
@@ -8644,6 +8681,22 @@ packages:
     dev: true
     resolution:
       integrity: sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
+  /vue-cli-plugin-vuetify/2.0.7:
+    dependencies:
+      null-loader: 3.0.0
+      semver: 7.3.2
+      shelljs: 0.8.4
+    dev: true
+    peerDependencies:
+      sass-loader: '*'
+      vuetify-loader: '*'
+    peerDependenciesMeta:
+      sass-loader:
+        optional: true
+      vuetify-loader:
+        optional: true
+    resolution:
+      integrity: sha512-4riK5bzyvkZ4CxpQk/Vl6z8n8tmJUhuxh+k8xc/MZRdCt9RxAm3G4SxcEweroqKGXg+CRRfhqysaEQVtd4D40Q==
   /vue-eslint-parser/7.1.0_eslint@6.8.0:
     dependencies:
       debug: 4.2.0
@@ -9088,3 +9141,4 @@ specifiers:
   eslint: ^6.7.2
   eslint-plugin-vue: ^7.0.0-0
   vue: ^3.0.0-0
+  vue-cli-plugin-vuetify: ~2.0.7
