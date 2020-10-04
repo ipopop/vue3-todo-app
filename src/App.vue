@@ -2,7 +2,7 @@
   <h1>Veille techno</h1>
   <Form @add="saveTechno" />
   <br />
-  <TechnoList :technos="technos" @delete-techno="deleteTechno" />
+  <TechnoList :technos="technos" @delete-techno="deleteTechno" @edit-techno="editTechno" />
   <br />
   <footer><p>Todolist with Vue.js 3</p></footer>
 </template>
@@ -26,15 +26,20 @@ export default {
       console.log("App | saveTechno | technos.value : ", technos.value)
     }
 
+    const editTechno = function(tech) {
+      technos.value = technos.value.map(t => t.id !== tech.id ? t : tech)
+    }
+
     const deleteTechno = function(tech) {
       console.log("App | deleteTechno() | tech", tech);
       technos.value = technos.value.filter(t => t.id !== tech.id)
     }
     
     return {
+      technos,
       saveTechno,
+      editTechno,
       deleteTechno,
-      technos
     }
 
   }

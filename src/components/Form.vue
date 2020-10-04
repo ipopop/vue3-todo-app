@@ -2,7 +2,7 @@
 <template>
     <form @submit.prevent="addTechno">
         <label for="techno">Techno a ajouter</label>
-        <input type="text" name="techno" v-model="techToLearn" />
+        <input class="addTechno" type="text" name="techno" v-model="techToLearn" />
         <button type="submit">ajouter</button>
     </form>
 </template>
@@ -33,6 +33,10 @@ export default {
         margin: 0 auto;
         display: flex;
         flex-direction: column;
+    }
+
+    .addTechno {
+        text-align: center;
     }
 
     label {

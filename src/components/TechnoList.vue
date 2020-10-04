@@ -29,7 +29,7 @@
 <script>
 import { ref } from 'vue'
 export default {
-    emits: ["delete-techno"],
+    emits: ["edit-techno", "delete-techno"],
     props: {
         technos: {
             type: Array,
@@ -48,6 +48,7 @@ export default {
         }
 
         let save = function() {
+            emit("edit-techno", technoToEdit.value)
             technoToEdit.value = null
         }
 
@@ -103,7 +104,6 @@ export default {
         height: 21px;
         border: none;
         border-radius: 3px;
-        padding: 0 auto;
         padding-bottom: 1px;
         margin-bottom: 3px;
         background-color: darkgray;
