@@ -1,5 +1,7 @@
 # vue3-todo-app
 
+![vue3-todo-app](src/assets/vue3-todo-app.jpg)
+
 ## Project setup
 ```
 pnpm install
