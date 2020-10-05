@@ -29,10 +29,10 @@ export default {
 
 <style>
     form {
-        width: fit-content;
-        margin: 0 auto;
         display: flex;
         flex-direction: column;
+        width: fit-content;
+        margin: 0 auto;
     }
 
     .addTechno {

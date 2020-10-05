@@ -1,9 +1,7 @@
 <template>
   <h1>Veille techno</h1>
   <Form @add="saveTechno" />
-  <br />
   <TechnoList :technos="technos" @delete-techno="deleteTechno" @edit-techno="editTechno" />
-  <br />
   <footer><p>Todolist with Vue.js 3</p></footer>
 </template>
 
@@ -48,14 +46,14 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   width: 90%;
   max-width: 333px;
   margin: 0 auto;
   margin-top: 60px;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
 }
 footer p {
   margin-top: 50px;

@@ -79,37 +79,37 @@ export default {
 
     li {
         height: 32px;
+        margin: 10px 0;
         display: flex;
         justify-content: space-between;
-        margin: 10px 0;
     }
 
     input {
-        max-width: 150px;
-        border-radius: 3px;
         border: none;
         height: 25px;
-        font-size: 17px;
+        max-width: 150px;
+        border-radius: 3px;
         font-family: Avenir, Helvetica, Arial, sans-serif;
+        font-size: 17px;
     }
 
     span {
         width: 85%;
         margin: 0 20px;
-        overflow: hidden;
         margin-top: 1px;
+        overflow: hidden;
     }
 
     button {
-        height: 21px;
         border: none;
-        border-radius: 3px;
-        padding-bottom: 1px;
-        margin-bottom: 3px;
-        background-color: darkgray;
         list-style: none;
         list-style-type: none;
         list-style-position: outside;
         list-style-image: none;
+        height: 21px;
+        border-radius: 3px;
+        padding-bottom: 1px;
+        margin-bottom: 3px;
+        background-color: darkgray;
     }
 </style>
